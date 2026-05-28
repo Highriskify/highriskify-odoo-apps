@@ -1,0 +1,25 @@
+.o_highriskify_backend_logo_img {
+    object-fit: contain !important;
+    background: transparent !important;
+}
+.o_highriskify_backend_logo_card {
+    width: 74px !important;
+    height: 74px !important;
+    display: block !important;
+    margin: 8px 8px 12px 8px !important;
+}
+.o_highriskify_backend_logo_target,
+.o_highriskify_backend_logo_box {
+    min-width: 150px;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.o_highriskify_backend_logo_form {
+    width: 150px !important;
+    height: 150px !important;
+    max-width: 150px !important;
+    max-height: 150px !important;
+    display: block !important;
+}

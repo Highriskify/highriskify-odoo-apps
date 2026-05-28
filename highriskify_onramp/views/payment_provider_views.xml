@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="payment_provider_form_highriskify_onramp" model="ir.ui.view">
+        <field name="name">payment.provider.form.highriskify.onramp.clean.final.layout</field>
+        <field name="model">payment.provider</field>
+        <field name="inherit_id" ref="payment.payment_provider_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='provider_credentials']" position="inside">
+                <group string="HighRiskify Settings" invisible="code != 'highriskify_onramp'">
+                    <field name="highriskify_wallet_address" required="code == 'highriskify_onramp' and state != 'disabled'"/>
+                    <field name="highriskify_api_domain" required="code == 'highriskify_onramp'"/>
+                    <field name="highriskify_checkout_domain" required="code == 'highriskify_onramp'"/>
+                    <field name="highriskify_tolerance_ratio"/>
+                </group>
+                <group string="Hosted Checkout Branding" invisible="code != 'highriskify_onramp'">
+                    <field name="highriskify_logo_url"/>
+                    <field name="highriskify_background_color" placeholder="#ffffff"/>
+                    <field name="highriskify_theme_color" placeholder="#111827"/>
+                    <field name="highriskify_button_color" placeholder="#111827"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="payment_transaction_form_highriskify_onramp" model="ir.ui.view">
+        <field name="name">payment.transaction.form.highriskify.onramp</field>
+        <field name="model">payment.transaction</field>
+        <field name="inherit_id" ref="payment.payment_transaction_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/notebook" position="inside">
+                <page string="HighRiskify" invisible="provider_code != 'highriskify_onramp'">
+                    <group>
+                        <group string="Wallet / Checkout">
+                            <field name="highriskify_tracking_address"/>
+                            <field name="highriskify_polygon_wallet"/>
+                            <field name="highriskify_callback_url"/>
+                        </group>
+                        <group string="Amounts / Callback">
+                            <field name="highriskify_original_amount"/>
+                            <field name="highriskify_original_currency"/>
+                            <field name="highriskify_expected_amount"/>
+                            <field name="highriskify_paid_amount"/>
+                            <field name="highriskify_paid_coin"/>
+                            <field name="highriskify_txid_out"/>
+                        </group>
+                    </group>
+                    <group string="Raw Callback Payload" groups="base.group_system">
+                        <field name="highriskify_provider_payload" nolabel="1"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="payment_provider_form_highriskify_methods_on_payment_form" model="ir.ui.view">
+        <field name="name">payment.provider.form.highriskify.methods.payment.form</field>
+        <field name="model">payment.provider</field>
+        <field name="inherit_id" ref="payment.payment_provider_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='configuration']//group[@name='payment_form']" position="inside">
+                <separator string="HighRiskify Provider Options" invisible="code != 'highriskify_onramp'"/>
+                <field name="payment_method_ids" string="Available HighRiskify Providers" widget="many2many_tags" invisible="code != 'highriskify_onramp'" options="{'no_create': True}"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
