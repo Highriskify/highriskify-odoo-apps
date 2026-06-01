@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="payment_provider_form_cryptopaymate_crypto" model="ir.ui.view">
+        <field name="name">payment.provider.form.cryptopaymate.crypto</field>
+        <field name="model">payment.provider</field>
+        <field name="inherit_id" ref="payment.payment_provider_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='provider_credentials']" position="inside">
+                <group string="HighRiskify Crypto API Settings" invisible="code != 'cryptopaymate_crypto'">
+                    <field name="cryptopaymate_api_base_url" required="code == 'cryptopaymate_crypto'"/>
+                    <field name="cryptopaymate_checkout_domain" required="code == 'cryptopaymate_crypto'"/>
+                    <field name="cryptopaymate_underpaid_tolerance"/>
+                    <field name="cryptopaymate_customer_pays_blockchain_fees"/>
+                    <field name="cryptopaymate_request_pending_callbacks" invisible="1"/>
+                    <field name="cryptopaymate_confirmations" invisible="1"/>
+                </group>
+
+                <group string="Multicoin Payout Wallets" invisible="code != 'cryptopaymate_crypto'">
+                    <field name="cryptopaymate_wallet_evm"/>
+                    <field name="cryptopaymate_wallet_btc"/>
+                    <field name="cryptopaymate_wallet_bitcoincash"/>
+                    <field name="cryptopaymate_wallet_ltc"/>
+                    <field name="cryptopaymate_wallet_doge"/>
+                    <field name="cryptopaymate_wallet_solana"/>
+                    <field name="cryptopaymate_wallet_trc20"/>
+                </group>
+
+                <group string="Branding" invisible="code != 'cryptopaymate_crypto'">
+                    <field name="cryptopaymate_backend_logo" widget="image" options="{'size': [150, 150]}"/>
+                    <field name="cryptopaymate_frontend_logo" widget="image"/>
+                    <field name="cryptopaymate_hosted_logo_url"/>
+                    <field name="cryptopaymate_background_color" placeholder="#ffffff"/>
+                    <field name="cryptopaymate_theme_color" placeholder="#0763E8"/>
+                    <field name="cryptopaymate_button_color" placeholder="#0763E8"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="payment_transaction_form_cryptopaymate_crypto" model="ir.ui.view">
+        <field name="name">payment.transaction.form.cryptopaymate.crypto</field>
+        <field name="model">payment.transaction</field>
+        <field name="inherit_id" ref="payment.payment_transaction_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <group string="HighRiskify Crypto Multicoin" invisible="provider_code != 'cryptopaymate_crypto'">
+                    <group string="Hosted Session">
+                        <field name="cryptopaymate_ticker"/>
+                        <field name="cryptopaymate_network"/>
+                        <field name="cryptopaymate_token_symbol"/>
+                        <field name="cryptopaymate_temp_wallet"/>
+                        <field name="cryptopaymate_callback_url"/>
+                        <field name="cryptopaymate_remote_status"/>
+                    </group>
+                    <group string="Amounts / Transactions">
+                        <field name="cryptopaymate_original_amount"/>
+                        <field name="cryptopaymate_original_currency"/>
+                        <field name="cryptopaymate_received_fiat_amount"/>
+                        <field name="cryptopaymate_paid_amount"/>
+                        <field name="cryptopaymate_paid_coin"/>
+                        <field name="cryptopaymate_value_forwarded_coin"/>
+                        <field name="cryptopaymate_txid_in"/>
+                        <field name="cryptopaymate_txid_out"/>
+                    </group>
+                </group>
+                <group string="HighRiskify Crypto Raw Provider Data" groups="base.group_system" invisible="provider_code != 'cryptopaymate_crypto'">
+                    <field name="cryptopaymate_ipn_token"/>
+                    <field name="cryptopaymate_nonce"/>
+                    <field name="cryptopaymate_status_nonce"/>
+                    <field name="cryptopaymate_payment_token" nolabel="1"/>
+                    <field name="cryptopaymate_hosted_url" nolabel="1"/>
+                    <field name="cryptopaymate_provider_payload" nolabel="1"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
