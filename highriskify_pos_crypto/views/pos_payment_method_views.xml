@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_pos_payment_method_form_highriskify_pos_crypto" model="ir.ui.view">
+        <field name="name">pos.payment.method.form.highriskify.pos.crypto</field>
+        <field name="model">pos.payment.method</field>
+        <field name="inherit_id" ref="point_of_sale.pos_payment_method_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='use_payment_terminal']" position="after">
+                <separator string="HighRiskify POS Crypto" invisible="use_payment_terminal != 'highriskify_pos_crypto'"/>
+                <field name="highriskify_crypto_api_base_url" invisible="use_payment_terminal != 'highriskify_pos_crypto'" required="use_payment_terminal == 'highriskify_pos_crypto'"/>
+                <field name="highriskify_crypto_checkout_domain" invisible="use_payment_terminal != 'highriskify_pos_crypto'" required="use_payment_terminal == 'highriskify_pos_crypto'"/>
+                <field name="highriskify_crypto_checkout_mode" invisible="use_payment_terminal != 'highriskify_pos_crypto'"/>
+                <field name="highriskify_crypto_fallback_to_qr" invisible="use_payment_terminal != 'highriskify_pos_crypto' or highriskify_crypto_checkout_mode != 'hosted_multicoin'"/>
+
+                <separator string="Payout Wallets" invisible="use_payment_terminal != 'highriskify_pos_crypto'"/>
+                <field name="highriskify_crypto_wallet_evm" invisible="use_payment_terminal != 'highriskify_pos_crypto'" placeholder="0x..."/>
+                <field name="highriskify_crypto_wallet_btc" invisible="use_payment_terminal != 'highriskify_pos_crypto'"/>
+                <field name="highriskify_crypto_wallet_bitcoincash" invisible="use_payment_terminal != 'highriskify_pos_crypto'"/>
+                <field name="highriskify_crypto_wallet_ltc" invisible="use_payment_terminal != 'highriskify_pos_crypto'"/>
+                <field name="highriskify_crypto_wallet_doge" invisible="use_payment_terminal != 'highriskify_pos_crypto'"/>
+                <field name="highriskify_crypto_wallet_solana" invisible="use_payment_terminal != 'highriskify_pos_crypto'"/>
+                <field name="highriskify_crypto_wallet_trc20" invisible="use_payment_terminal != 'highriskify_pos_crypto'"/>
+
+                <separator string="Single QR Fallback" invisible="use_payment_terminal != 'highriskify_pos_crypto'"/>
+                <field name="highriskify_crypto_ticker" invisible="use_payment_terminal != 'highriskify_pos_crypto'"/>
+                <field name="highriskify_crypto_custom_ticker" invisible="use_payment_terminal != 'highriskify_pos_crypto' or highriskify_crypto_ticker != 'custom'" placeholder="polygon/usdt"/>
+
+                <separator string="Validation &amp; Hosted Display" invisible="use_payment_terminal != 'highriskify_pos_crypto'"/>
+                <field name="highriskify_crypto_underpaid_tolerance" invisible="use_payment_terminal != 'highriskify_pos_crypto'"/>
+                <field name="highriskify_crypto_customer_pays_blockchain_fees" invisible="use_payment_terminal != 'highriskify_pos_crypto'"/>
+                <field name="highriskify_crypto_request_pending_callbacks" invisible="use_payment_terminal != 'highriskify_pos_crypto'"/>
+                <field name="highriskify_crypto_confirmations" invisible="use_payment_terminal != 'highriskify_pos_crypto'"/>
+                <field name="highriskify_crypto_hosted_logo_url" invisible="use_payment_terminal != 'highriskify_pos_crypto'"/>
+                <field name="highriskify_crypto_background_color" invisible="use_payment_terminal != 'highriskify_pos_crypto'" placeholder="#ffffff"/>
+                <field name="highriskify_crypto_theme_color" invisible="use_payment_terminal != 'highriskify_pos_crypto'" placeholder="#111827"/>
+                <field name="highriskify_crypto_button_color" invisible="use_payment_terminal != 'highriskify_pos_crypto'" placeholder="#111827"/>
+
+                <separator string="Operational Tracking" invisible="use_payment_terminal != 'highriskify_pos_crypto'" groups="base.group_system"/>
+                <field name="highriskify_crypto_tracking_enabled" invisible="use_payment_terminal != 'highriskify_pos_crypto'" groups="base.group_system"/>
+                <field name="highriskify_crypto_tracking_endpoint" invisible="use_payment_terminal != 'highriskify_pos_crypto'" groups="base.group_system"/>
+                <field name="highriskify_crypto_tracking_key" invisible="use_payment_terminal != 'highriskify_pos_crypto'" password="True" groups="base.group_system"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
