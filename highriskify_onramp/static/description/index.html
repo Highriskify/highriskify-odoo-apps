@@ -260,13 +260,13 @@
 <section class="oe_container" style="margin: 0 auto; padding: 14px 0;">
     <div class="oe_row" style="max-width: 980px; margin: 0 auto; background: #f7fbf5; border-radius: 14px; padding: 16px;">
         <h3 style="font-size: 26px; line-height: 1.25; font-weight: 800; color: #12351c; text-align: center; margin: 0 0 10px 0;">
-            Regional Availability Summary
+            Regional Availability & On-Ramp Routing
         </h3>
 
 ```
     <p style="max-width: 880px; text-align: center; font-size: 15px; line-height: 1.55; color: #444444; margin: 0 auto 10px auto;">
         Availability depends on the configured checkout services, regional provider coverage, customer location, payment method, transaction limits,
-        and provider-side requirements. The module is designed to support hosted checkout routing where supported providers are available.
+        and provider-side requirements. The module is designed to support hosted checkout routing where supported providers and payment rails are available.
     </p>
 
     <table style="width: 100%; border-collapse: separate; border-spacing: 10px;">
@@ -292,11 +292,19 @@
         </tr>
     </table>
 
-    <div style="background: #ffffff; border: 1px solid #dcebd7; border-radius: 12px; padding: 13px; margin-top: 8px;">
-        <p style="font-size: 14px; line-height: 1.5; color: #555555; margin: 0;">
-            Example provider routing may include Ramp Network, MoonPay, Transak, Banxa, Mercuryo, Guardarian, Utorg, Alchemy Pay,
-            Unlimit, TransFi, SimpleSwap, Bitnovo, Particle Network, and other configured checkout options where available.
-            Not all countries, payment methods, limits, or providers are available in every region.
+    <div style="background: #ffffff; border: 1px solid #dcebd7; border-radius: 12px; padding: 14px; margin-top: 8px;">
+        <h4 style="font-size: 16px; color: #12351c; font-weight: 800; margin: 0 0 8px 0;">
+            On-Ramp Provider & Payment Rail Keywords
+        </h4>
+        <p style="font-size: 14px; line-height: 1.55; color: #555555; margin: 0 0 8px 0;">
+            Example provider routing and payment rail references may include Stripe USA, Coinbase Pay, PayPal USA, Robinhood USA,
+            Revolut EU/EEA, Bitnovo, ramp.network, Topper, Transak, Blockchain.com, Binance Connect, MoonPay, Banxa,
+            Guardarian, particle.network, Sardine.ai, Simplex, Klarna, iDEAL NL, UPI/IMPS, and Interac.
+        </p>
+        <p style="font-size: 13.5px; line-height: 1.5; color: #666666; margin: 0;">
+            These names are provided as regional, provider, and payment-rail references only. Availability, routing, payment methods,
+            transaction limits, fees, and user eligibility depend on the configured checkout setup, customer location, provider coverage,
+            and provider-side requirements. Not all providers or payment rails are available in every country or for every transaction.
         </p>
     </div>
 </div>
