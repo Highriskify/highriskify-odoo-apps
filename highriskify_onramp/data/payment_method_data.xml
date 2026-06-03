@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="payment_method_highriskify_onramp" model="payment.method">
+        <field name="name">Pay By Credit / Debit Card — Powered by On-Ramp Provider</field>
+        <field name="code">highriskify_onramp</field>
+        <field name="sequence">1001</field>
+        <field name="active">True</field>
+        <field name="support_tokenization">False</field>
+    </record>
+
+    <record id="payment_method_highriskify_banxa" model="payment.method">
+        <field name="name">Banxa Onramp (Credit Card)</field>
+        <field name="code">highriskify_banxa</field>
+        <field name="sequence">1002</field>
+        <field name="active">True</field>
+        <field name="support_tokenization">False</field>
+    </record>
+
+    <record id="payment_method_highriskify_binance" model="payment.method">
+        <field name="name">Binance Onramp (Credit Card)</field>
+        <field name="code">highriskify_binance</field>
+        <field name="sequence">1003</field>
+        <field name="active">True</field>
+        <field name="support_tokenization">False</field>
+    </record>
+
+    <record id="payment_method_highriskify_bitnovo" model="payment.method">
+        <field name="name">Bitnovo Onramp (Credit Card)</field>
+        <field name="code">highriskify_bitnovo</field>
+        <field name="sequence">1004</field>
+        <field name="active">True</field>
+        <field name="support_tokenization">False</field>
+    </record>
+
+    <record id="payment_method_highriskify_customprovider" model="payment.method">
+        <field name="name">Custom Onramp (Credit Card)</field>
+        <field name="code">highriskify_customprovider</field>
+        <field name="sequence">1005</field>
+        <field name="active">True</field>
+        <field name="support_tokenization">False</field>
+    </record>
+
+    <record id="payment_method_highriskify_interac" model="payment.method">
+        <field name="name">Interac Onramp (Credit Card)</field>
+        <field name="code">highriskify_interac</field>
+        <field name="sequence">1006</field>
+        <field name="active">True</field>
+        <field name="support_tokenization">False</field>
+    </record>
+
+    <record id="payment_method_highriskify_moonpay" model="payment.method">
+        <field name="name">Moonpay Onramp (Credit Card)</field>
+        <field name="code">highriskify_moonpay</field>
+        <field name="sequence">1007</field>
+        <field name="active">True</field>
+        <field name="support_tokenization">False</field>
+    </record>
+
+    <record id="payment_method_highriskify_paypal" model="payment.method">
+        <field name="name">PayPal Onramp (Credit Card)</field>
+        <field name="code">highriskify_paypal</field>
+        <field name="sequence">1008</field>
+        <field name="active">True</field>
+        <field name="support_tokenization">False</field>
+    </record>
+
+    <record id="payment_method_highriskify_rampnetwork" model="payment.method">
+        <field name="name">Ramp Onramp (Credit Card)</field>
+        <field name="code">highriskify_rampnetwork</field>
+        <field name="sequence">1009</field>
+        <field name="active">True</field>
+        <field name="support_tokenization">False</field>
+    </record>
+
+    <record id="payment_method_highriskify_revolut" model="payment.method">
+        <field name="name">Revolut Onramp (Credit Card)</field>
+        <field name="code">highriskify_revolut</field>
+        <field name="sequence">1010</field>
+        <field name="active">True</field>
+        <field name="support_tokenization">False</field>
+    </record>
+
+    <record id="payment_method_highriskify_robinhood" model="payment.method">
+        <field name="name">Robinhood Onramp (Credit Card)</field>
+        <field name="code">highriskify_robinhood</field>
+        <field name="sequence">1011</field>
+        <field name="active">True</field>
+        <field name="support_tokenization">False</field>
+    </record>
+
+    <record id="payment_method_highriskify_sardine" model="payment.method">
+        <field name="name">Sardine Onramp (Credit Card)</field>
+        <field name="code">highriskify_sardine</field>
+        <field name="sequence">1012</field>
+        <field name="active">True</field>
+        <field name="support_tokenization">False</field>
+    </record>
+
+    <record id="payment_method_highriskify_simplex" model="payment.method">
+        <field name="name">Simplex Onramp (Credit Card)</field>
+        <field name="code">highriskify_simplex</field>
+        <field name="sequence">1013</field>
+        <field name="active">True</field>
+        <field name="support_tokenization">False</field>
+    </record>
+
+    <record id="payment_method_highriskify_stripe" model="payment.method">
+        <field name="name">Stripe Onramp (Credit Card)</field>
+        <field name="code">highriskify_stripe</field>
+        <field name="sequence">1014</field>
+        <field name="active">True</field>
+        <field name="support_tokenization">False</field>
+    </record>
+
+    <record id="payment_method_highriskify_topper" model="payment.method">
+        <field name="name">Topper Onramp (Credit Card)</field>
+        <field name="code">highriskify_topper</field>
+        <field name="sequence">1015</field>
+        <field name="active">True</field>
+        <field name="support_tokenization">False</field>
+    </record>
+
+    <record id="payment_method_highriskify_transak" model="payment.method">
+        <field name="name">Transak Onramp (Credit Card)</field>
+        <field name="code">highriskify_transak</field>
+        <field name="sequence">1016</field>
+        <field name="active">True</field>
+        <field name="support_tokenization">False</field>
+    </record>
+
+    <record id="payment_method_highriskify_transfi" model="payment.method">
+        <field name="name">TransFi Onramp (Credit Card)</field>
+        <field name="code">highriskify_transfi</field>
+        <field name="sequence">1017</field>
+        <field name="active">True</field>
+        <field name="support_tokenization">False</field>
+    </record>
+
+    <record id="payment_method_highriskify_upi" model="payment.method">
+        <field name="name">UPI Onramp (Credit Card)</field>
+        <field name="code">highriskify_upi</field>
+        <field name="sequence">1018</field>
+        <field name="active">True</field>
+        <field name="support_tokenization">False</field>
+    </record>
+
+    <record id="payment_method_highriskify_utorg" model="payment.method">
+        <field name="name">Utorg Onramp (Credit Card)</field>
+        <field name="code">highriskify_utorg</field>
+        <field name="sequence">1019</field>
+        <field name="active">True</field>
+        <field name="support_tokenization">False</field>
+    </record>
+
+</odoo>

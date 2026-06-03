@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="redirect_form">
+        <!-- Submit to an internal Odoo no-referrer bridge page. -->
+        <form t-att-action="api_url" method="post">
+            <noscript>
+                <button type="submit" class="btn btn-primary">Continue to HighRiskify secure checkout</button>
+            </noscript>
+        </form>
+    </template>
+</odoo>

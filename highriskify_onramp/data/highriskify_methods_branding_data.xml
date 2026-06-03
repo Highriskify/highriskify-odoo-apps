@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <function model="payment.provider" name="action_highriskify_repair_clean_provider_view"/>
+    <function model="payment.provider" name="action_highriskify_cleanup_legacy_tracking_views"/>
+    <function model="payment.provider" name="action_highriskify_seed_methods_and_branding"/>
+</odoo>
