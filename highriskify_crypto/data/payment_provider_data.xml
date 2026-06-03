@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="payment_provider_cryptopaymate_crypto" model="payment.provider">
+        <field name="name">HighRiskify Crypto</field>
+        <field name="code">cryptopaymate_crypto</field>
+        <field name="state">disabled</field>
+        <field name="is_published">False</field>
+        <field name="company_id" ref="base.main_company"/>
+        <field name="redirect_form_view_id" ref="highriskify_crypto.redirect_form"/>
+        <field name="allow_tokenization">False</field>
+        <field name="allow_express_checkout">False</field>
+        <field name="pre_msg"><![CDATA[<div class="o_cryptopaymate_payment_message">Pay via secure multicoin crypto checkout. Available coin options are shown based on the payout wallets configured by the merchant.</div>]]></field>
+        <field name="payment_method_ids" eval="[Command.set([ref('highriskify_crypto.payment_method_cryptopaymate_multicoin_hosted')])]"/>
+    </record>
+</odoo>
