@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_highriskify_pos_crypto_transaction_tree" model="ir.ui.view">
+        <field name="name">highriskify.pos.crypto.transaction.tree</field>
+        <field name="model">highriskify.pos.crypto.transaction</field>
+        <field name="arch" type="xml">
+            <list string="HighRiskify POS Crypto Transactions" create="0" edit="0">
+                <field name="create_date"/>
+                <field name="name"/>
+                <field name="state" decoration-success="state == 'done'" decoration-danger="state == 'error'" decoration-warning="state == 'pending'" widget="badge"/>
+                <field name="payment_mode"/>
+                <field name="pos_config_id"/>
+                <field name="pos_session_id"/>
+                <field name="order_name"/>
+                <field name="amount"/>
+                <field name="currency_name"/>
+                <field name="ticker"/>
+                <field name="expected_crypto_amount"/>
+                <field name="paid_amount"/>
+                <field name="paid_coin"/>
+                <field name="received_fiat_amount"/>
+                <field name="txid_out"/>
+                <field name="temp_wallet"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_highriskify_pos_crypto_transaction_form" model="ir.ui.view">
+        <field name="name">highriskify.pos.crypto.transaction.form</field>
+        <field name="model">highriskify.pos.crypto.transaction</field>
+        <field name="arch" type="xml">
+            <form string="HighRiskify POS Crypto Transaction" create="0" edit="0">
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name"/>
+                        <h1><field name="name" readonly="1"/></h1>
+                    </div>
+                    <group>
+                        <group string="Order">
+                            <field name="state" widget="badge"/>
+                            <field name="pos_payment_method_id"/>
+                            <field name="pos_config_id"/>
+                            <field name="pos_session_id"/>
+                            <field name="order_uid"/>
+                            <field name="order_name"/>
+                            <field name="partner_email"/>
+                        </group>
+                        <group string="Amounts">
+                            <field name="amount"/>
+                            <field name="expected_fiat_amount"/>
+                            <field name="currency_name"/>
+                            <field name="expected_crypto_amount"/>
+                            <field name="minimum_amount"/>
+                            <field name="paid_amount"/>
+                            <field name="paid_coin"/>
+                            <field name="received_fiat_amount"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Crypto Session">
+                            <field name="payment_mode"/>
+                            <field name="ticker"/>
+                            <field name="network"/>
+                            <field name="token_symbol"/>
+                            <field name="temp_wallet"/>
+                            <field name="ipn_token" groups="base.group_system"/>
+                            <field name="payment_token" groups="base.group_system"/>
+                        </group>
+                        <group string="Links">
+                            <field name="payment_page_url" widget="url"/>
+                            <field name="checkout_url" widget="url"/>
+                            <field name="callback_url" groups="base.group_system"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Blockchain">
+                            <field name="remote_status"/>
+                            <field name="txid_in"/>
+                            <field name="txid_out"/>
+                            <field name="value_forwarded_coin"/>
+                        </group>
+                        <group string="Error">
+                            <field name="error_message" nolabel="1"/>
+                        </group>
+                    </group>
+                    <group string="Raw Callback" groups="base.group_system">
+                        <field name="provider_payload" nolabel="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_highriskify_pos_crypto_transactions" model="ir.actions.act_window">
+        <field name="name">HighRiskify POS Crypto</field>
+        <field name="res_model">highriskify.pos.crypto.transaction</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">No HighRiskify POS Crypto transactions yet.</p>
+        </field>
+    </record>
+
+    <menuitem id="menu_highriskify_pos_crypto_transactions"
+              name="HighRiskify POS Crypto"
+              parent="point_of_sale.menu_point_root"
+              action="action_highriskify_pos_crypto_transactions"
+              sequence="96"
+              groups="point_of_sale.group_pos_manager"/>
+</odoo>
