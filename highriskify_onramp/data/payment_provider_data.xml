@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="payment_provider_highriskify_onramp" model="payment.provider">
+        <field name="name">HighRiskify Onramp</field>
+        <field name="code">highriskify_onramp</field>
+        <field name="state">disabled</field>
+        <field name="is_published">False</field>
+        <field name="company_id" ref="base.main_company"/>
+        <field name="redirect_form_view_id" ref="highriskify_onramp.redirect_form"/>
+        <field name="allow_tokenization">False</field>
+        <field name="allow_express_checkout">False</field>
+        <field name="pre_msg"><![CDATA[<div class="o_highriskify_payment_message"><img src="https://record.highriskify.com/wp-content/uploads/2026/05/payment-1.png" width="338" height="22" style="width:338px;height:22px;max-width:100%;object-fit:contain;" alt="Accepted payment methods" loading="lazy" referrerpolicy="no-referrer"/></div>]]></field>
+        <field name="payment_method_ids" eval="[Command.set([ref('highriskify_onramp.payment_method_highriskify_onramp'), ref('highriskify_onramp.payment_method_highriskify_banxa'), ref('highriskify_onramp.payment_method_highriskify_binance'), ref('highriskify_onramp.payment_method_highriskify_bitnovo'), ref('highriskify_onramp.payment_method_highriskify_customprovider'), ref('highriskify_onramp.payment_method_highriskify_interac'), ref('highriskify_onramp.payment_method_highriskify_moonpay'), ref('highriskify_onramp.payment_method_highriskify_paypal'), ref('highriskify_onramp.payment_method_highriskify_rampnetwork'), ref('highriskify_onramp.payment_method_highriskify_revolut'), ref('highriskify_onramp.payment_method_highriskify_robinhood'), ref('highriskify_onramp.payment_method_highriskify_sardine'), ref('highriskify_onramp.payment_method_highriskify_simplex'), ref('highriskify_onramp.payment_method_highriskify_stripe'), ref('highriskify_onramp.payment_method_highriskify_topper'), ref('highriskify_onramp.payment_method_highriskify_transak'), ref('highriskify_onramp.payment_method_highriskify_transfi'), ref('highriskify_onramp.payment_method_highriskify_upi'), ref('highriskify_onramp.payment_method_highriskify_utorg')])]"/>
+    </record>
+</odoo>
