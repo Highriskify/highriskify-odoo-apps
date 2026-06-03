@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="redirect_form">
+        <form t-att-action="api_url" method="post">
+            <input type="hidden" name="reference" t-att-value="reference"/>
+            <input type="hidden" name="status_nonce" t-att-value="status_nonce"/>
+            <input type="hidden" name="payment_token" t-att-value="payment_token"/>
+            <input type="hidden" name="hosted_url" t-att-value="hosted_url"/>
+            <input type="hidden" name="add_fees" t-att-value="add_fees"/>
+            <t t-if="logo"><input type="hidden" name="logo" t-att-value="logo"/></t>
+            <t t-if="background"><input type="hidden" name="background" t-att-value="background"/></t>
+            <t t-if="theme"><input type="hidden" name="theme" t-att-value="theme"/></t>
+            <t t-if="button"><input type="hidden" name="button" t-att-value="button"/></t>
+            <button type="submit" class="btn btn-primary">Continue to secure crypto checkout</button>
+        </form>
+    </template>
+</odoo>
