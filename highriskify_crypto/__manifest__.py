@@ -1,68 +1,26 @@
 {
-'name': 'HighRiskify Crypto',
-'version': '17.0.2.0.1',
-'category': 'Accounting/Payment Providers',
-'summary': 'Odoo crypto payment gateway for eCommerce, website checkout, invoices, payment links, Bitcoin, Ethereum, USDT, USDC, stablecoins, QR code payments, hosted crypto checkout, multi-chain blockchain payments, webhook synchronization, and non-custodial wallet settlement.',
-'description': """
-HighRiskify Crypto is a hosted non-custodial crypto payment gateway integration for Odoo 17. It connects Odoo Ecommerce, Odoo Website, Odoo Invoicing, and compatible payment workflows with HighRiskify hosted crypto checkout services.
-
-This module allows merchants to configure payout wallets, redirect customers to a crypto checkout experience, display payment amount, receiving address, and QR code information, receive payment notifications, and synchronize Odoo transactions, orders, quotations, and invoices after confirmed payment updates.
-
-Main Capabilities:
-
-* Adds HighRiskify Crypto as an Odoo payment provider.
-* Supports Odoo Website crypto payments and Odoo Ecommerce crypto checkout.
-* Supports Odoo invoice payment workflows where applicable.
-* Supports hosted crypto checkout, hosted payment pages, payment links, crypto invoice payments, and payment button workflows.
-* Supports QR code crypto payments, wallet-address based checkout, and customer wallet payment flows.
-* Supports webhook/callback synchronization for transaction monitoring and Odoo payment status updates.
-* Supports non-custodial crypto transaction workflows where merchant payout wallets are configured in Odoo.
-* Supports multi-currency crypto checkout and multi-chain payment workflows depending on configured network availability.
-* Supports fast settlement and instant payout routing according to the configured checkout workflow.
-* Supports backend configuration for API endpoint, hosted checkout domain, payout wallets, branding, display text, and operational settings.
-* Only the main multicoin hosted method is attached to the provider by default; individual coin methods remain available for administrators to enable manually if needed.
-
-Odoo Crypto Payment Coverage:
-HighRiskify Crypto can be used for Odoo Crypto Payment Gateway, Odoo Ecommerce Crypto Payments, Odoo Website Crypto Payments, Odoo Online Store Crypto Payments, Odoo Cryptocurrency Payments, Odoo Bitcoin Payments, Odoo Ethereum Payments, Odoo Stablecoin Payments, Odoo USDC Payments, Odoo USDT Payments, Odoo Blockchain Payments, Odoo Crypto Checkout, Odoo Crypto Invoicing, Odoo Crypto Payment Integration, Odoo Alternative Payment Methods, Odoo Web3 Payments, Odoo Hosted Crypto Checkout, Odoo QR Code Crypto Payments, Odoo Wallet Payments, Odoo Wallet Connect Payments, Odoo Crypto Invoice Payments, Odoo Bitcoin Invoicing, Odoo USDC Invoice Payments, Odoo USDT Invoice Payments, Odoo Ecommerce Crypto Checkout, Odoo Website Crypto Checkout, Odoo Online Store Crypto Checkout, Odoo Crypto Payment Button, Odoo Crypto Payment Link, Odoo Payment Links, Odoo Subscription Billing, Odoo Recurring Payments, Odoo Invoice Payments, Odoo Ecommerce Payment Gateway, Odoo Merchant Gateway, and Odoo Crypto Merchant Account workflows.
-
-Accepted Crypto and Network References:
-Supported coin, token, and network references may include Bitcoin, BTC, Bitcoin Cash, BCH, Litecoin, LTC, Dogecoin, DOGE, Ethereum, ETH, Solana, SOL, Avalanche, AVAX, Tron, TRX, BNB Smart Chain, BNB, BEP-20, ERC-20, TRC-20, Arbitrum, Avalanche Network, Polygon Network, Solana Network, Bitcoin Network, Ethereum Network, 1INCH, Cardano, ADA, Bitcoin BEP20, BTCB, PancakeSwap, CAKE, DAI, PHPt, Shiba Inu, SHIB, USD Coin, USDC, Tether, USDT, XRP, ARB, Chainlink, LINK, Ondo Finance, ONDO, Pepe, PEPE, Polygon, POL, Coinbase Wrapped Bitcoin, cbBTC, PayPal USD, PYUSD, World Liberty Financial USD, USD1, TrueUSD, TUSD, EURC, Wrapped Bitcoin, WBTC, Wrapped Ethereum, WETH, and other configured cryptocurrencies, stablecoins, tokens, and digital assets where available.
-
-Crypto Checkout and Payment Workflows:
-The module supports crypto checkout for Odoo Ecommerce, cryptocurrency payments for online stores, Bitcoin payments for Odoo websites, Ethereum payments for Odoo websites, USDC payments for Odoo websites, USDT payments for Odoo websites, stablecoin checkout for Odoo websites, blockchain payments for Odoo websites, Odoo online store stablecoin payments, crypto merchant gateway workflows, crypto processing, crypto transactions, crypto settlement, digital currency payments, global payments, international payments, borderless payments, hosted crypto checkout, QR code crypto payments, wallet payments, crypto invoice payments, payment link generator workflows, invoice payment links, invoice payment buttons, automated invoice collection, crypto accounts receivable, digital invoice payments, and blockchain invoicing.
-
-Stablecoin, Multi-Chain, and Blockchain Coverage:
-This integration is suitable for multi-chain payments, blockchain payments, stablecoin payments, cryptocurrency payments, digital asset payments, multi-chain crypto gateway workflows, multi-chain stablecoin payments, self-custody payments, non-custodial crypto payments, crypto API integration, Odoo payment API workflows, crypto webhook integration, crypto transaction monitoring, secure crypto payments for ecommerce, secure blockchain payment gateway workflows, multi-currency crypto gateway use cases, low fee payment gateway workflows, reduced payment processing cost workflows, no-chargeback payment flows, instant payment settlement, fast settlement payments, global payment acceptance, international payments, borderless payments, alternative payment methods, crypto merchant processing, digital asset payments, blockchain payment gateway workflows, crypto ecommerce solution workflows, and Web3 ecommerce payments.
-
-Invoice, Subscription, and Recurring Payment Coverage:
-HighRiskify Crypto may be used with compatible Odoo flows for crypto invoice payments, Bitcoin invoice payment solution workflows, cryptocurrency invoice payments, crypto invoicing software, invoice automation with crypto, accepting Ethereum for invoices, accepting USDC for invoices, accepting USDT for invoices, stablecoin payments, blockchain payments, crypto subscription payments, recurring crypto payments, subscription crypto billing, stablecoin subscription payments, recurring USDC payments, recurring USDT payments, automated crypto billing, and automated invoice collection where supported by the configured Odoo workflow and checkout setup.
-
-Customer Payment Flow:
-When a customer selects HighRiskify Crypto during checkout, the module prepares the Odoo payment transaction and redirects the customer to the configured hosted crypto checkout experience. The customer may be shown the crypto amount, receiving address, and QR code. A unique payment session or receiving reference can be used for order-level tracking and payment detection. After payment confirmation, callback or webhook notifications synchronize the Odoo payment transaction and related order, quotation, or invoice records.
-
-External Services and Data Handling:
-This module connects to HighRiskify payment infrastructure and related operational tracking endpoints to create checkout/payment sessions, monitor transaction status, process callback notifications, and synchronize Odoo records. Limited transaction and order-related information may be exchanged, including order references, invoice references, transaction amounts, currency, selected crypto asset or network, customer information where available, wallet/session identifiers, callback notifications, transaction identifiers, merchant website information, and system-generated timestamps.
-
-Availability Disclaimer:
-Availability of cryptocurrencies, stablecoins, networks, hosted crypto checkout flows, QR code checkout, payment links, invoice payments, subscription billing, transaction monitoring, settlement routing, fees, limits, and customer eligibility depends on the configured HighRiskify crypto gateway settings, merchant wallet configuration, customer location, supported network availability, and provider-side requirements.
-""",
-'author': 'HighRiskify',
-'website': 'https://highriskify.com',
-'support': '[support@highriskify.com](mailto:support@highriskify.com)',
-'license': 'LGPL-3',
-'depends': ['payment', 'website_sale'],
-'data': [
-'data/payment_method_data.xml',
-'views/payment_cryptopaymate_templates.xml',
-'views/payment_provider_views.xml',
-'data/payment_provider_data.xml',
-'data/cryptopaymate_seed_data.xml',
-],
-'images': [
-'static/description/main_screenshot.png',
-'static/description/backend_settings.png',
-],
-'installable': True,
-'application': False,
-'auto_install': False,
+    'name': 'HighRiskify Crypto',
+    'version': '17.0.2.0.2',
+    'category': 'Accounting/Payment Providers',
+    'summary': 'Accept Bitcoin, USDC, USDT, BTC, BCH, LTC, DOGE, ETH and stablecoin crypto payments in Odoo Website, Ecommerce, invoices and hosted checkout with QR payments, wallet payments, payment links, webhook sync and non-custodial settlement.',
+    'description': 'HighRiskify Crypto is a Cryptocurrency Non-Custodial Crypto Payment Gateway for Odoo Website, Odoo Ecommerce, Odoo Invoicing, and compatible Odoo Subscription payment flows. It helps merchants accept online crypto payments through hosted checkout, QR payments, wallet payments, payment links, crypto invoices, invoice payment links, and webhook transaction synchronization.\n\nShort Description / Tagline:\nAccept Bitcoin, USDC, USDT, fiat and crypto checkout payments in Odoo Website, Odoo Ecommerce, invoices, subscriptions, and hosted checkout payment flows.\n\nMain Capabilities:\n* Adds HighRiskify Crypto as an Odoo payment provider.\n* Supports Odoo Website crypto payments and Odoo Ecommerce crypto checkout.\n* Supports Odoo invoice payments, payment links, invoice email payment flows, subscription payments, recurring payments, crypto billing, and stablecoin billing where supported by the configured Odoo workflow.\n* Supports hosted checkout, QR payments, wallet payments, wallet-address based checkout, customer wallet payment flows, and non-custodial self-custody settlement workflows.\n* Supports webhook/callback synchronization for payment status updates across Odoo transactions, orders, quotations, and invoices.\n* Supports backend configuration for API endpoint, hosted checkout domain, payout wallets, branding, display text, and operational settings.\n* Only the main multicoin hosted method is attached to the provider by default; individual coin methods remain available for administrators to enable manually if needed.\n\nBrand and General Search Keywords:\nHigh riskify, Highriskify, HighRiskify, High Riskify, check out, online payments.\n\nOdoo Crypto Payment Keywords:\nOdoo Crypto, Crypto Payments, Crypto Gateway, Crypto Checkout, Bitcoin Payments, Bitcoin Gateway, USDC Payments, USDT Payments, Stablecoin Payments, Stablecoin Gateway, Odoo Website, Odoo Ecommerce, Odoo Checkout, Odoo Payments, Odoo Payment Gateway, Odoo Website Payments, Odoo Ecommerce Payments, Odoo Online Store, Ecommerce Crypto, Website Crypto, Online Crypto Payments, Crypto Shopping Cart, Crypto Processor, Crypto Merchant, Payment Links, Hosted Checkout, QR Payments, Non Custodial, Self Custody, Wallet Connect, Wallet Payments, Crypto API, Payment API, Webhook, Crypto Invoices, Invoice Payments, Subscription Payments, Recurring Payments, Crypto Billing, Stablecoin Billing, Crypto payment link, Invoice email, Crypto, Payment Gateway, Website Payments, Ecommerce Payments.\n\nAccepted Crypto Asset and Token References:\nBitcoin, BTC, Bitcoin Cash, BCH, Litecoin, LTC, Dogecoin, DOGE, Ethereum, ETH, Solana, SOL, Avalanche, AVAX, Tron, TRX, BNB Smart Chain, BEP-20, 1INCH, Cardano, ADA, BNB, Bitcoin BEP20, BTCB, PancakeSwap, CAKE, DAI, PHPt, Shiba Inu, SHIB, USD Coin, USDC, Tether, USDT, XRP, ERC-20, Arbitrum, ARB, Chainlink, LINK, Ondo Finance, ONDO, PEPE, Polygon, POL, Coinbase Wrapped Bitcoin, cbBTC, PayPal USD, PYUSD, World Liberty Financial USD, USD1, TrueUSD, TUSD, EURC, Wrapped Bitcoin, WBTC, Wrapped Ethereum, WETH, DASH.\n\nBlockchain Network References:\nBitcoin Network, Ethereum Network, BNB Smart Chain, BEP-20, ERC-20, TRC-20, Solana Network, Arbitrum Network, Avalanche Network, Polygon Network.\n\nCrypto Checkout and Payment Workflow Keywords:\nHighRiskify Crypto supports Odoo crypto checkout, Odoo payment gateway workflows, Bitcoin payments, Bitcoin gateway flows, USDC payments, USDT payments, stablecoin payments, stablecoin gateway workflows, ecommerce crypto, website crypto, online crypto payments, crypto shopping cart flows, crypto processor workflows, crypto merchant workflows, payment links, hosted checkout, QR payments, non custodial settlement, self custody payments, wallet connect, wallet payments, crypto API, payment API, webhook notifications, crypto invoices, invoice payments, subscription payments, recurring payments, crypto billing, stablecoin billing, crypto payment link workflows, invoice email payment workflows, website payments, ecommerce payments, and online store checkout flows.\n\nMerchant Category and Industry Search Terms:\nThis module can be discovered by merchants researching alternative payment methods, crypto payment gateways, stablecoin payment gateways, and website payment options for specialty industries including CBD, Hemp Products, Vape Products, E-Cigarettes, Nicotine Products, Kratom, Supplements, Nutraceuticals, Telehealth, Peptides, Anti-Aging Clinics, Wellness Clinics, Medical Spas (Med Spas), Weight Loss Programs, GLP-1 Clinics, Testosterone Therapy (TRT), Hormone Replacement Therapy (HRT), Research Chemicals, Adult Products, Adult Content, Dating Services, Subscription Services, Membership Programs, Debt Relief, Credit Repair, Forex, Cryptocurrency, Crypto Exchanges, Crypto On-Ramps, Gambling, Sports Betting, Sweepstakes, Firearms Accessories, Ammunition, Precious Metals, Pawn Shops, Smoke Shops, Head Shops, Herbal Products, Alternative Health Products, Travel Clubs, Business Opportunities, Coaching Programs, Ticket Resellers, Multi-Level Marketing (MLM), Drop Shipping, International E-Commerce, Replica Products (usually prohibited), Digital Downloads, Software Licenses, IPTV Services, Debt Collection. Availability and suitability depend on merchant approval, applicable law, compliance requirements, supported checkout configuration, and HighRiskify operational settings.\n\nExternal Services and Data Handling:\nThis module connects to HighRiskify payment infrastructure and related operational tracking endpoints to create checkout/payment sessions, monitor transaction status, process callback notifications, and synchronize Odoo records. Limited transaction and order-related information may be exchanged, including order references, invoice references, transaction amounts, currency, selected crypto asset or network, customer information where available, wallet/session identifiers, callback notifications, transaction identifiers, merchant website information, and system-generated timestamps.\n\nAvailability Disclaimer:\nAvailability of cryptocurrencies, stablecoins, networks, hosted crypto checkout flows, QR code checkout, payment links, invoice payments, subscription billing, transaction monitoring, settlement routing, fees, limits, and customer eligibility depends on the configured HighRiskify crypto gateway settings, merchant wallet configuration, customer location, supported network availability, and provider-side requirements.',
+    'author': 'HighRiskify',
+    'website': 'https://highriskify.com',
+    'support': 'info@highriskify.com',
+    'license': 'LGPL-3',
+    'depends': ['payment', 'website_sale'],
+    'data': [
+        'data/payment_method_data.xml',
+        'views/payment_cryptopaymate_templates.xml',
+        'views/payment_provider_views.xml',
+        'data/payment_provider_data.xml',
+        'data/cryptopaymate_seed_data.xml',
+    ],
+    'images': [
+        'static/description/main_screenshot.png',
+        'static/description/backend_settings.png',
+    ],
+    'installable': True,
+    'application': False,
+    'auto_install': False,
 }
