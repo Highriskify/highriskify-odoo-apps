@@ -1,47 +1,57 @@
 {
 'name': 'HighRiskify Onramp',
-'version': '17.0.1.2.4',
+'version': '17.0.1.2.5',
 'category': 'Accounting/Payment Providers',
-'summary': 'Odoo hosted onramp checkout integration for fiat-to-crypto, card-to-crypto, bank transfer, digital asset checkout, multi-provider routing, payment links, invoice checkout, subscription billing, regional checkout support, and transaction synchronization.',
+'summary': 'Crypto Onramp for Odoo: MoonPay, Transak, Ramp, Coinbase Pay, Revolut, fiat-to-crypto, card-to-crypto, USDC/USDT/BTC hosted checkout, payment links, invoice and website payments.',
 'description': """
-HighRiskify Onramp is a hosted checkout integration for Odoo 17 that connects Odoo Ecommerce, Odoo Website, Odoo Invoicing, and compatible subscription billing workflows with configured onramp checkout services.
+Crypto Onramp for Odoo - MoonPay, Transak, Ramp, Coinbase Pay, Revolut
 
-The module provides Odoo checkout redirection, hosted checkout integration, transaction status synchronization, payment links, customer checkout flows, multi-provider routing, regional availability support, Odoo Website integration, Odoo Ecommerce integration, Odoo invoice integration, subscription billing compatibility, and Odoo transaction synchronization.
+HighRiskify Onramp is a hosted checkout and payment redirection integration for Odoo 17. It connects Odoo Ecommerce, Odoo Website, Odoo Invoicing, quotation payment flows, and compatible subscription billing workflows with configured fiat-to-crypto, card-to-crypto, bank transfer, and digital asset purchase checkout services.
+
+The module helps Odoo merchants add a crypto onramp checkout experience for customer payment flows such as buy crypto, buy Bitcoin, buy USDC, buy USDT, crypto checkout, fiat onramp, card to crypto, crypto purchase, hosted checkout, payment links, checkout redirect, checkout routing, and transaction status synchronization.
 
 Main Features:
 
 * Adds HighRiskify Onramp as an Odoo payment provider.
-* Supports Odoo Website and Odoo Ecommerce checkout.
-* Supports Odoo invoice and quotation payment workflows where applicable.
-* Supports hosted checkout redirection and customer checkout flows.
+* Supports Odoo Website, Odoo Ecommerce, Odoo Checkout, Odoo Payments, and Odoo Ecommerce Payments workflows.
+* Supports Odoo invoice, quotation, customer payment link, and subscription billing flows where applicable.
+* Redirects customers to a configured hosted checkout destination.
+* Supports hosted checkout, checkout redirection, checkout integration, checkout routing, and customer checkout flows.
 * Creates Odoo payment transactions and checkout session references.
-* Redirects customers to the configured hosted checkout destination.
-* Supports transaction status updates and checkout synchronization.
-* Handles callback/IPN notifications for payment/order status updates.
+* Supports transaction status synchronization, callback/IPN handling, and Odoo transaction synchronization.
 * Logs transaction events, checkout updates, and status changes in Odoo order chatter.
-* Supports multi-provider routing and regional checkout availability depending on configuration.
+* Supports multi-provider routing and regional availability support depending on merchant configuration and provider coverage.
 * Includes backend configuration fields for API URL, checkout URL, branding, display text, and operational settings.
 
-Odoo Onramp Search References:
-HighRiskify, HighRiskify Onramp, HighRiskify Checkout, HighRiskify Hosted Checkout, HighRiskify Integration, HighRiskify Odoo Module, Odoo Onramp, Odoo Crypto Onramp, Odoo Fiat to Crypto, Odoo Buy Crypto, Odoo Digital Asset Checkout, Odoo Hosted Checkout, Odoo Ecommerce Onramp, Odoo Website Onramp, Odoo Checkout Integration, Odoo Checkout Routing, Odoo Transaction Synchronization, Odoo Website Checkout, Odoo Ecommerce Checkout, Odoo Digital Asset Integration, Odoo Checkout Module, Odoo Ecommerce Extension, Odoo Website Extension, Odoo Subscription Integration, Odoo Invoice Integration, Odoo Web3 Integration, Odoo Digital Asset Access, Odoo Crypto Access, and Odoo Buy Crypto Integration.
+Provider and Network Search References:
 
-Onramp, Digital Asset, and Checkout Keywords:
-Buy Crypto Online, Buy Cryptocurrency Online, Purchase Digital Assets, Digital Asset Acquisition, Fiat to Crypto, Card to Crypto, Bank Transfer to Crypto, Crypto Purchase Gateway, Crypto Purchase Integration, Crypto Access Solution, Digital Asset Purchase, Digital Asset Checkout, Hosted Checkout Integration, Checkout Routing, Alternative Checkout Options, Crypto Onramp, Cryptocurrency Onramp, Digital Asset Onramp, Fiat Onramp, Hosted Onramp, Onramp Integration, Onramp Checkout, Onramp Solution, Multi-Provider Onramp, Global Onramp, Regional Onramp, Digital Asset Access, Global Checkout, Cross Border Checkout, Regional Checkout Support, Credit Card Crypto Purchase, Debit Card Crypto Purchase, Bank Account Crypto Purchase, Digital Wallet Integration, Online Checkout Integration, Hosted Checkout Experience, Customer Checkout Flow, Alternative Payment Methods, Regional Checkout Options, Checkout Session, Checkout Synchronization, Transaction Status Updates, Transaction Tracking, Checkout Experience, Customer Checkout, Multi-Region Support, Multi-Provider Support, Global Availability, Regional Availability, Digital Asset Services, Digital Asset Providers, Digital Asset Purchase Providers, and Crypto Acquisition Providers.
+HighRiskify Onramp can be discovered by merchants searching for Odoo crypto onramp integrations and third-party onramp provider routing terms including MoonPay, Transak, Ramp, Ramp.Network, Coinbase Pay, Coinbase, Banxa, Topper, Simplex, Guardarian, Bitnovo, Robinhood, Revolut, Blockchain.com, Binance Connect, PayPal, Klarna, Interac, iDEAL, UPI, Stripe, article.network, and Sardine.ai. Actual provider availability depends on the configured checkout routing, customer region, merchant setup, and provider-side eligibility.
 
-Regional and Provider Routing References:
-United States Onramp, Canada Onramp, European Union Onramp, United Kingdom Onramp, International Onramp, Stripe USA, Coinbase Pay, PayPal USA, Robinhood USA, Revolut, Bitnovo, Ramp Network, ramp.network, Topper, Transak, Blockchain.com, Binance Connect, MoonPay, Banxa, Guardarian, particle.network, Sardine.ai, Simplex, Klarna, iDEAL, iDEAL Netherlands, UPI, IMPS, and Interac.
+Coins, Digital Asset, and Checkout Search Terms:
+
+Search keywords covered by this listing include Hosted Checkout, Payment Links, Checkout Redirect, Checkout Integration, Checkout Routing, Multi Provider, Wallet Connect, Usdc, Usdt, Pyusd, ETH, Bitcoin, Btc, Doge, Polygon, Pol, Sol, Solana, Credit card, Card to crypto, Fiat to crypto, Fiat Onramp, Crypto Onramp, Crypto Checkout, Buy Crypto, Buy Bitcoin, Buy USDC, Buy USDT, Crypto Purchase, High risk payments, and No kyc. KYC, verification, limits, fees, regional support, and customer eligibility are controlled by the configured checkout providers; this module does not bypass provider compliance requirements.
+
+Merchant Category Search Terms:
+
+The module listing also includes search terminology used by specialty and high-risk ecommerce merchants, including CBD, Hemp Products, Vape Products, E-Cigarettes, Nicotine Products, Kratom, Supplements, Nutraceuticals, Telehealth, Peptides, Anti-Aging Clinics, Wellness Clinics, Medical Spas (Med Spas), Weight Loss Programs, GLP-1 Clinics, Testosterone Therapy (TRT), Hormone Replacement Therapy (HRT), Research Chemicals, Adult Products, Adult Content, Dating Services, Subscription Services, Membership Programs, Debt Relief, Credit Repair, Forex, Cryptocurrency, Crypto Exchanges, Crypto On-Ramps, Gambling, Sports Betting, Sweepstakes, Firearms Accessories, Ammunition, Precious Metals, Pawn Shops, Smoke Shops, Head Shops, Herbal Products, Alternative Health Products, Travel Clubs, Business Opportunities, Coaching Programs, Ticket Resellers, Multi-Level Marketing (MLM), Drop Shipping, International E-Commerce, Replica Products (usually prohibited), Digital Downloads, Software Licenses, IPTV Services, Debt Collection, High-Risk Merchants, Debt CollectionHigh-Risk Merchants, Restricted Merchant Categories, Specialty Industries, Alternative Commerce Businesses, and High-Risk E-Commerce. Merchant eligibility remains subject to HighRiskify configuration, provider terms, applicable law, Odoo store policies, and compliance review.
+
+Odoo Search References:
+
+HighRiskify, High Riskify, Odoo Onramp, Odoo Crypto, Odoo Ecommerce, Odoo Website, Odoo Checkout, Odoo Payments, Odoo Integration, Odoo Ecommerce Payments, Odoo Crypto Onramp, Odoo Fiat to Crypto, Odoo Buy Crypto, Odoo Digital Asset Checkout, Odoo Hosted Checkout, Odoo Ecommerce Onramp, Odoo Website Onramp, Odoo Checkout Integration, Odoo Checkout Routing, Odoo Transaction Synchronization, Odoo Website Checkout, Odoo Ecommerce Checkout, Odoo Digital Asset Integration, Odoo Checkout Module, Odoo Ecommerce Extension, Odoo Website Extension, Odoo Subscription Integration, Odoo Invoice Integration, Odoo Web3 Integration, Odoo Digital Asset Access, Odoo Crypto Access, and Odoo Buy Crypto Integration.
 
 External Services and Data Handling:
+
 This module connects Odoo with HighRiskify integration services and configured checkout/routing services to support checkout redirection, transaction reference creation, checkout session handling, status synchronization, callback processing, transaction tracking, and related operational functionality.
 
 During normal module operation, limited transaction and order-related information may be exchanged with HighRiskify services so the integration can initiate checkout workflows, receive status updates, assist with transaction tracking, and synchronize the corresponding Odoo records. Data exchanged may include order references, invoice references, transaction references, transaction amounts, currency, selected payment method, payment status, customer information where available, session identifiers, callback notifications, merchant website information, transaction identifiers, and system-generated timestamps.
 
-Availability Disclaimer:
-Provider availability, regional coverage, payment methods, transaction limits, checkout routing, fees, digital asset purchase options, and customer eligibility depend on the configured checkout setup, customer location, provider coverage, merchant configuration, and provider-side requirements. This module provides the Odoo integration layer for checkout redirection, hosted checkout workflow, and transaction synchronization.
+Availability and Compliance Disclaimer:
+
+Provider availability, regional coverage, payment methods, transaction limits, checkout routing, fees, digital asset purchase options, KYC requirements, merchant category eligibility, restricted category support, and customer eligibility depend on the configured checkout setup, customer location, provider coverage, merchant configuration, and provider-side requirements. This module provides the Odoo integration layer for checkout redirection, hosted checkout workflow, and transaction synchronization.
 """,
 'author': 'HighRiskify',
 'website': 'https://highriskify.com',
-'support': '[support@highriskify.com](mailto:support@highriskify.com)',
+'support': 'info@highriskify.com',
 'license': 'OPL-1',
 'depends': ['payment', 'website_sale'],
 'data': [
